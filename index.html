@@ -1,95 +1,276 @@
-# 👮‍♂️ HƯỚNG DẪN TUYỂN SINH CÔNG AN NHÂN DÂN (CAND) 2026
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyển sinh Công an Nhân dân 2026 - Đức Hợp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        :root {
+            --primary-green: #3a5a40; /* Màu xanh lá sẫm đặc trưng */
+            --accent-red: #ae2012;    /* Đỏ trầm hài hòa */
+            --soft-gold: #f9dcc4;     /* Vàng nhạt */
+            --light-bg: #f8f9fa;      /* Xám trắng nhẹ */
+            --white: #ffffff;
+        }
 
-![Status](https://img.shields.io/badge/Trạng_thái-Đang_nhận_hồ_sơ-brightgreen?style=for-the-badge&logo=github)
-![Year](https://img.shields.io/badge/Năm_tuyển_sinh-2026-blue?style=for-the-badge)
-![Location](https://img.shields.io/badge/Địa_điểm-Đức_Hợp_|_Hưng_Yên-orange?style=for-the-badge)
-![Deadline](https://img.shields.io/badge/Hạn_chót-15/04/2026-red?style=for-the-badge)
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--light-bg);
+            margin: 0;
+            color: #333;
+            scroll-behavior: smooth;
+        }
 
-[cite_start]Tài liệu này tổng hợp hướng dẫn đăng ký sơ tuyển đại học, trung cấp chính quy tuyển mới vào lực lượng Công an nhân dân năm 2026 theo thông báo của Công an xã Đức Hợp.
+        /* --- Header & Hero --- */
+        .hero {
+            background: linear-gradient(135deg, rgba(58, 90, 64, 0.9), rgba(174, 32, 18, 0.7)), 
+                        url('https://api.duchhop.hungyen.gov.vn/images/banner.jpg') no-repeat center/cover;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
 
----
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
 
-## 📑 Mục lục
-1. [Phương thức tuyển sinh](#1-phương-thức-tuyển-sinh)
-2. [Cấu trúc bài thi đánh giá](#2-cấu-trúc-bài-thi-đánh-giá)
-3. [Đối tượng & Điều kiện tiêu chuẩn](#3-đối-tượng--điều-kiện-tiêu-chuẩn)
-4. [Quy trình & Hồ sơ sơ tuyển](#4-quy-trình--hồ-sơ-sơ-tuyển)
-5. [Thông tin liên hệ](#5-thông-tin-liên-hệ)
+        /* --- Layout --- */
+        .container {
+            max-width: 1100px;
+            margin: -80px auto 50px;
+            padding: 0 20px;
+        }
 
----
+        section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
 
-## 🎯 1. Phương thức tuyển sinh
-[cite_start]Năm 2026 áp dụng **03 phương thức** xét tuyển linh hoạt[cite: 9]:
+        .section-title {
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            position: relative;
+        }
 
-| Phương thức | [cite_start]Chi tiết nội dung [cite: 10, 11, 12, 13] |
-| :--- | :--- |
-| **Cách 1** | Tuyển thẳng theo quy chế của Bộ GD&ĐT và Bộ Công an. |
-| **Cách 2** | Xét tuyển kết hợp: Chứng chỉ ngoại ngữ quốc tế + Học tập THPT + Bài thi đánh giá Bộ Công an. |
-| **Cách 3** | Xét tuyển kết hợp: Kết quả thi tốt nghiệp THPT + Bài thi đánh giá Bộ Công an. |
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--accent-red);
+            display: block;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
 
----
+        /* --- Grid & Cards --- */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
 
-## 📝 2. Cấu trúc bài thi đánh giá
-[cite_start]Thí sinh chọn **01 trong 04 mã bài thi** sau (Thời gian làm bài: **180 phút**, hình thức thi viết)[cite: 15, 17, 18, 19]:
+        .info-card {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
 
-| Mã bài thi | [cite_start]Tự luận (Bắt buộc) [cite: 16] | [cite_start]Trắc nghiệm (Bắt buộc) [cite: 16] | [cite_start]Trắc nghiệm (Tự chọn) [cite: 16] |
-| :--- | :--- | :--- | :--- |
-| **CA1** | Ngữ văn | Toán, Lịch sử, Ngôn ngữ Anh | **Vật lý** |
-| **CA2** | Ngữ văn | Toán, Lịch sử, Ngôn ngữ Anh | **Hóa học** |
-| **CA3** | Ngữ văn | Toán, Lịch sử, Ngôn ngữ Anh | **Sinh học** |
-| **CA4** | Ngữ văn | Toán, Lịch sử, Ngôn ngữ Anh | **Địa lý** |
+        .info-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+        }
 
----
+        .info-card i {
+            font-size: 2.5rem;
+            color: var(--accent-red);
+            margin-bottom: 15px;
+        }
 
-## 🛡️ 3. Đối tượng & Điều kiện tiêu chuẩn
+        /* --- Table Styling --- */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 10px;
+            border: 1px solid #eee;
+        }
 
-### 👤 Đối tượng & Độ tuổi
-* [cite_start]**Công dân thường trú:** Không quá 22 tuổi; người dân tộc thiểu số không quá 25 tuổi[cite: 22, 24].
-* [cite_start]**Chiến sĩ nghĩa vụ:** Nhập ngũ năm 2025[cite: 25].
-* [cite_start]**Công dân hoàn thành nghĩa vụ:** Có quyết định xuất ngũ trong vòng 12 tháng[cite: 26, 27].
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-### 📚 Học lực & Hạnh kiểm
-* [cite_start]**Học lực:** Đạt loại **Khá** trở lên trong các năm THPT (Dành cho công dân thường trú và hoàn thành nghĩa vụ)[cite: 34].
-* [cite_start]**Điểm môn tổ hợp:** Từng môn trong tổ hợp xét tuyển phải đạt từ **7,0 điểm** trở lên (Dân tộc thiểu số đạt từ **6,5 điểm**)[cite: 35].
-* [cite_start]**Hạnh kiểm:** Đạt loại **Khá** trở lên[cite: 37].
-* [cite_start]**Tình trạng:** Chưa kết hôn, chưa có con đẻ/con nuôi[cite: 38].
+        th {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 15px;
+            font-weight: 500;
+        }
 
-### 🏃 Sức khỏe (Theo Thông tư 131/TT-BCA)
-* **Chiều cao:** Nam (1m64 - 1m95); [cite_start]Nữ (1m58 - 1m80)[cite: 40].
-* [cite_start]**BMI:** Đạt từ **18,5 đến 30**[cite: 41].
-* [cite_start]**Thị lực:** Tổng 2 mắt đạt 18/10 trở lên[cite: 42]. [cite_start]Nếu bị cận/viễn: Mỗi mắt không quá 3 đi-ốp[cite: 43].
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #f1f1f1;
+            text-align: center;
+        }
 
----
+        /* --- Timeline & Contact --- */
+        .contact-section {
+            background: var(--primary-green);
+            color: var(--white);
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 20px;
+        }
 
-## 🚀 4. Quy trình & Hồ sơ sơ tuyển
+        .btn-contact {
+            background: var(--white);
+            color: var(--primary-green);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
 
-### 📅 Thời gian & Địa điểm
-* [cite_start]**Thời gian:** Kể từ ngày ra thông báo đến hết ngày **15/04/2026**[cite: 61].
-* [cite_start]**Địa điểm:** Trực tiếp tại Công an xã Đức Hợp (Thôn Đức Trung, xã Đức Hợp, tỉnh Hưng Yên)[cite: 61].
+        .btn-contact:hover {
+            background: var(--soft-gold);
+            transform: scale(1.05);
+        }
 
-### [cite_start]📂 Hồ sơ cần chuẩn bị (Bản sao công chứng) [cite: 53]
-* [cite_start][x] Học bạ THPT hoặc sao trích học bạ có xác nhận của nhà trường[cite: 53, 55].
-* [cite_start][x] Bằng tốt nghiệp THPT (nếu có)[cite: 55].
-* [cite_start][x] Thẻ Căn cước hoặc Căn cước công dân[cite: 55].
-* [cite_start][x] Quyết định xuất ngũ (Dành cho công dân hoàn thành nghĩa vụ)[cite: 56].
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 1.8rem; }
+            section { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
 
-### 🤺 Kiểm tra khả năng vận động
-[cite_start]Thí sinh chọn **02 nội dung** để kiểm tra[cite: 59]:
-* Chạy 100m.
-* Chạy 1500m (Nam) / 800m (Nữ).
-* Bật xa tại chỗ.
-* Co tay xà đơn.
+<div class="hero">
+    <div class="hero-content animate__animated animate__zoomIn">
+        <i class="fa-solid fa-shield-halved fa-3x" style="color: var(--soft-gold); margin-bottom: 20px;"></i>
+        <h1>THÔNG BÁO TUYỂN SINH CAND 2026</h1>
+        <p>CÔNG AN XÃ ĐỨC HỢP - NIỀM TIN & TRÁCH NHIỆM</p>
+    </div>
+</div>
 
----
+<div class="container">
+    <section class="animate__animated animate__fadeInUp">
+        <h2 class="section-title">Phương Thức Tuyển Sinh</h2>
+        <div class="grid-3">
+            <div class="info-card">
+                <i class="fas fa-star"></i>
+                <h3>Phương thức 1</h3>
+                <p>Tuyển thẳng theo quy chế hiện hành của Bộ GD&ĐT và Bộ Công an.</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-certificate"></i>
+                <h3>Phương thức 2</h3>
+                <p>Xét tuyển kết hợp chứng chỉ ngoại ngữ quốc tế với học lực THPT và bài thi Bộ Công an.</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-file-signature"></i>
+                <h3>Phương thức 3</h3>
+                <p>Xét tuyển kết hợp điểm thi tốt nghiệp THPT với bài thi đánh giá của Bộ Công an.</p>
+            </div>
+        </div>
+    </section>
 
-## 📞 5. Thông tin liên hệ
-Mọi khó khăn, vướng mắc thí sinh có thể trao đổi trực tiếp qua:
+    <section>
+        <h2 class="section-title">Kỳ Thi Đánh Giá Bộ Công An</h2>
+        <p style="text-align: center; margin-bottom: 20px;"><i class="fa-regular fa-clock"></i> Tổng thời gian: 180 phút | Hình thức: Thi viết</p>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã bài thi</th>
+                        <th>Tự luận bắt buộc</th>
+                        <th>Trắc nghiệm bắt buộc</th>
+                        <th>Trắc nghiệm tự chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CA1</strong></td>
+                        <td>Ngữ văn</td>
+                        <td>Toán, Sử, Anh</td>
+                        <td><span style="color: var(--accent-red)">Vật lí</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>CA2</strong></td>
+                        <td>Ngữ văn</td>
+                        <td>Toán, Sử, Anh</td>
+                        <td><span style="color: var(--accent-red)">Hóa học</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>CA3</strong></td>
+                        <td>Ngữ văn</td>
+                        <td>Toán, Sử, Anh</td>
+                        <td><span style="color: var(--accent-red)">Sinh học</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>CA4</strong></td>
+                        <td>Ngữ văn</td>
+                        <td>Toán, Sử, Anh</td>
+                        <td><span style="color: var(--accent-red)">Địa lí</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-> 👨‍✈️ **Đồng chí Minh - Tổ Tổng hợp**
-> [cite_start]* 📱 **Số điện thoại:** 0967.803.823 [cite: 67]
-> [cite_start]* 📍 **Địa chỉ:** Thôn Đức Trung, xã Đức Hợp, tỉnh Hưng Yên[cite: 61].
+    <section>
+        <h2 class="section-title">Tiêu Chuẩn Sơ Tuyển</h2>
+        <div class="grid-3">
+            <div class="info-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h4>Học lực</h4>
+                <p>Đạt loại <strong>Khá</strong> trở lên (theo học bạ THPT)[cite: 34]. Các môn tổ hợp đạt từ <strong>7.0đ</strong> trở lên[cite: 35].</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-ruler-vertical"></i>
+                <h4>Thể hình</h4>
+                <p>Nam: 1m64 - 1m95 [cite: 40].<br>Nữ: 1m58 - 1m80 [cite: 40].<br>BMI: 18.5 - 30[cite: 41].</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-eye"></i>
+                <h4>Thị lực</h4>
+                <p>Cận/Viễn thị không quá 3 đi-ốp[cite: 43]. Tổng thị lực 2 mắt qua kính đạt 19/10 trở lên[cite: 45].</p>
+            </div>
+        </div>
+    </section>
 
----
-**[XÁC NHẬN]**
-**Trung tá Đặng Hồng Ngọc**
-*Phó Trưởng Công an xã Đức Hợp* [cite: 76, 78]
+    <div class="contact-section">
+        <h2>Sẵn sàng gia nhập hàng ngũ CAND?</h2>
+        <p>Hạn cuối đăng ký sơ tuyển: <strong>Ngày 15 tháng 04 năm 2026</strong>[cite: 61].</p>
+        <p><i class="fas fa-location-dot"></i> Địa điểm: Công an xã Đức Hợp (Thôn Đức Trung)[cite: 61].</p>
+        <hr style="width: 50%; border: 0.5px solid rgba(255,255,255,0.2); margin: 20px auto;">
+        <p>Liên hệ đồng chí <strong>Minh (Tổ Tổng hợp)</strong> để được hướng dẫn trực tiếp[cite: 67].</p>
+        <a href="tel:0967803823" class="btn-contact"><i class="fas fa-phone"></i> Gọi ngay: 0967.803.823</a>
+    </div>
+</div>
+
+<footer style="text-align: center; padding: 30px; color: #777;">
+    <p>&copy; 2026 Công an xã Đức Hợp, huyện Kim Động, tỉnh Hưng Yên[cite: 4, 8].</p>
+</footer>
+
+</body>
+</html>
